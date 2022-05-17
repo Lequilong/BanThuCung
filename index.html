@@ -1,44 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./base/index.css">
-    <link rel="stylesheet" href="./Grid/Grid-system.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>web ban thu cung</title>
+    <link rel="stylesheet" href="./assets/css/Grid-system.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <title>Shop Pet</title>
 </head>
+
 <body>
 
     <div id="main">
         <div class="header grid wide">
             <div class="header_container row">
-                <div class="header_container-images c-3">
-                    <img src="./images/images_1.png" alt="">
+                <div class="header_container-images col c-4 m-4 l-3">
+                    <img src="./assets/images/images_1.png" alt="">
                 </div>
-                <div class="header_container_menu c-9">
-                    <div class="header_container_menu-nav">
-                        <ul class="header_container_menu-nav-ul row">
-                            <li class="header_container_menu-nav-li">Trang Chủ</li>
-                            <li class="header_container_menu-nav-li">Thú Cưng <i class="fa-solid fa-angle-down"></i></li>
-                            <li class="header_container_menu-nav-li">Phụ Kiện</li>
-                            <li class="header_container_menu-nav-li">Dịch vụ <i class="fa-solid fa-angle-down"></i></li>
-                            <li class="header_container_menu-nav-li">Giới Thiệu</li>
-                            <li class="header_container_menu-nav-li">Liên Hệ</li>
-                        </ul>
+                <div class="header_container_menu col c-8 m-8 l-9">
+                    <ul class="header__menu row">
+                        <li class="header__menu-item btn-home">Trang Chủ</li>
+                        <li class="header__menu-item position-relative">
+                            Thú Cưng <i class="fa-solid fa-angle-down"></i>
+                            <ul class="sub__menu">
+                                <li class="sub__menu-item">Chó Alaska Malamute</li>
+                                <li class="sub__menu-item">Chó Alaska Malamute</li>
+                                <li class="sub__menu-item">Chó Alaska Malamute</li>
+                                <li class="sub__menu-item">Chó Alaska Malamute</li>
+                                <li class="sub__menu-item">Chó Alaska Malamute</li>
+                                <li class="sub__menu-item">Chó Alaska Malamute</li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-item">Phụ Kiện</li>
+                        <li class="header__menu-item position-relative">
+                            Dịch vụ
+                            <i class="fa-solid fa-angle-down"></i>
+                            <ul class="sub__menu">
+                                <li class="sub__menu-item">SPA</li>
+                                <li class="sub__menu-item">Khách sạn thú cưng</li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-item">Giới Thiệu</li>
+                        <li class="header__menu-item">Liên Hệ</li>
+                    </ul>
+                    <div class="modal"></div>
+                    <button class="btn btn-menu-mobile">
+                        <!-- <i class="fa-solid fa-bars"></i> -->
+                    </button>
+                    <div class="line-on-mobile">
+                        <hr>
                     </div>
                     <div class="header_container_menu-images">
-                        <img src="./images/images_2.png" alt="">
+                        <img src="./assets/images/images_2.png" alt="">
                     </div>
                     <div class="header_container_menu-search">
-                        <input type="text" value="Tìm Kiếm... ">
+                        <input type="text" placeholder="Tìm Kiếm... ">
                         <i class="fa-solid fa-magnifying-glass input_search"></i>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="nav_bar">
+        <div class="line">
             <hr>
         </div>
         <div class="content grid wide">
@@ -48,69 +74,934 @@
                     <span>Danh Mục Sản Phẩm</span>
                 </div>
             </div>
-
-            <div class="content_container-item">
-                <div class="content_container-item-header">
-                    <h2>Sản Phẩm Mới</h2>
+            <div class="grid wide">
+                <div class="content">
+                    <h2 class="content__heading">Sản Phẩm Mới</h2>
+                    <div class="content__list row justify-content-center">
+                        <div class="col c-6 m-4 l-3">
+                            <div class="content__item">
+                                <div class="content__item-img-wrap">
+                                    <img src="./assets/images/images_3.png" alt="">
+                                    <span class="content__item--new">New</span>
+                                    <div class="content__item--coat">
+                                        <div class="content__item--coat-growth">
+                                            <div class="content__item--coat-wrap">
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <span class="coat-btn-title">Yêu thích</span>
+                                                </button>
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <span class="coat-btn-title">Xem nhanh</span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="btn btn-primary">
+                                                <a href="#" class="btn-primary-link">Xem thêm</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__item-detail">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="id_product">ID : SP00243 </span>
+                                        <span class="wrap-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+                                    <h3 class="name">Phốc Sóc Siêu Phẩm Ú Nù</h3>
+                                    <span class="price">35.000.000 ₫</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-6 m-4 l-3">
+                            <div class="content__item">
+                                <div class="content__item-img-wrap">
+                                    <img src="./assets/images/images_3.png" alt="">
+                                    <span class="content__item--new">New</span>
+                                    <div class="content__item--coat">
+                                        <div class="content__item--coat-growth">
+                                            <div class="content__item--coat-wrap">
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <span class="coat-btn-title">Yêu thích</span>
+                                                </button>
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <span class="coat-btn-title">Xem nhanh</span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="btn btn-primary">
+                                                <a href="#" class="btn-primary-link">Xem thêm</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__item-detail">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="id_product">ID : SP00243 </span>
+                                        <span class="wrap-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+                                    <h3 class="name">Phốc Sóc Siêu Phẩm Ú Nù</h3>
+                                    <span class="price">35.000.000 ₫</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-6 m-4 l-3">
+                            <div class="content__item">
+                                <div class="content__item-img-wrap">
+                                    <img src="./assets/images/husky.jpg" alt="">
+                                    <span class="content__item--new">New</span>
+                                    <div class="content__item--coat">
+                                        <div class="content__item--coat-growth">
+                                            <div class="content__item--coat-wrap">
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <span class="coat-btn-title">Yêu thích</span>
+                                                </button>
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <span class="coat-btn-title">Xem nhanh</span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="btn btn-primary">
+                                                <a href="#" class="btn-primary-link">Xem thêm</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__item-detail">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="id_product">ID : SP00243 </span>
+                                        <span class="wrap-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+                                    <h3 class="name">Phốc Sóc Siêu Phẩm Ú Nù</h3>
+                                    <span class="price">35.000.000 ₫</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-6 m-4 l-3">
+                            <div class="content__item">
+                                <div class="content__item-img-wrap">
+                                    <img src="./assets/images/images_3.png" alt="">
+                                    <span class="content__item--new">New</span>
+                                    <div class="content__item--coat">
+                                        <div class="content__item--coat-growth">
+                                            <div class="content__item--coat-wrap">
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <span class="coat-btn-title">Yêu thích</span>
+                                                </button>
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <span class="coat-btn-title">Xem nhanh</span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="btn btn-primary">
+                                                <a href="#" class="btn-primary-link">Xem thêm</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__item-detail">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="id_product">ID : SP00243 </span>
+                                        <span class="wrap-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+                                    <h3 class="name">Phốc Sóc Siêu Phẩm Ú Nù</h3>
+                                    <span class="price">35.000.000 ₫</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-more">
+                        <button type="button" class="btn btn-primary">
+                            <a href="#" class="btn-primary-link">Xem thêm</a>
+                        </button>
+                    </div>
                 </div>
-            </div>
-
-            <div class="content_container-list row">
-
-                <div class="content_container-list-nav c-3">
-                    <div class="content_container-list-nav-images">
-                        <img src="./images/images_3.png" alt="">
-                        <span>New</span>
+                <div class="content">
+                    <h2 class="content__heading">Sản Phẩm Nổi bậc</h2>
+                    <div class="content__list row justify-content-center">
+                        <div class="col c-6 m-4 l-3">
+                            <div class="content__item">
+                                <div class="content__item-img-wrap">
+                                    <img src="./assets/images/images_3.png" alt="">
+                                    <span class="content__item--new">Hot</span>
+                                    <div class="content__item--coat">
+                                        <div class="content__item--coat-growth">
+                                            <div class="content__item--coat-wrap">
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <span class="coat-btn-title">Yêu thích</span>
+                                                </button>
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <span class="coat-btn-title">Xem nhanh</span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="btn btn-primary">
+                                                <a href="#" class="btn-primary-link">Xem thêm</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__item-detail">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="id_product">ID : SP00243 </span>
+                                        <span class="wrap-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+                                    <h3 class="name">Phốc Sóc Siêu Phẩm Ú Nù</h3>
+                                    <span class="price">35.000.000 ₫</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-6 m-4 l-3">
+                            <div class="content__item">
+                                <div class="content__item-img-wrap">
+                                    <img src="./assets/images/images_3.png" alt="">
+                                    <span class="content__item--new">Hot</span>
+                                    <div class="content__item--coat">
+                                        <div class="content__item--coat-growth">
+                                            <div class="content__item--coat-wrap">
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <span class="coat-btn-title">Yêu thích</span>
+                                                </button>
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <span class="coat-btn-title">Xem nhanh</span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="btn btn-primary">
+                                                <a href="#" class="btn-primary-link">Xem thêm</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__item-detail">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="id_product">ID : SP00243 </span>
+                                        <span class="wrap-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+                                    <h3 class="name">Phốc Sóc Siêu Phẩm Ú Nù</h3>
+                                    <span class="price">35.000.000 ₫</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-6 m-4 l-3">
+                            <div class="content__item">
+                                <div class="content__item-img-wrap">
+                                    <img src="./assets/images/husky.jpg" alt="">
+                                    <span class="content__item--new">Hot</span>
+                                    <div class="content__item--coat">
+                                        <div class="content__item--coat-growth">
+                                            <div class="content__item--coat-wrap">
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <span class="coat-btn-title">Yêu thích</span>
+                                                </button>
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <span class="coat-btn-title">Xem nhanh</span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="btn btn-primary">
+                                                <a href="#" class="btn-primary-link">Xem thêm</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__item-detail">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="id_product">ID : SP00243 </span>
+                                        <span class="wrap-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+                                    <h3 class="name">Phốc Sóc Siêu Phẩm Ú Nù</h3>
+                                    <span class="price">35.000.000 ₫</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-6 m-4 l-3">
+                            <div class="content__item">
+                                <div class="content__item-img-wrap">
+                                    <img src="./assets/images/images_3.png" alt="">
+                                    <span class="content__item--new">Hot</span>
+                                    <div class="content__item--coat">
+                                        <div class="content__item--coat-growth">
+                                            <div class="content__item--coat-wrap">
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <span class="coat-btn-title">Yêu thích</span>
+                                                </button>
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <span class="coat-btn-title">Xem nhanh</span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="btn btn-primary">
+                                                <a href="#" class="btn-primary-link">Xem thêm</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__item-detail">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="id_product">ID : SP00243 </span>
+                                        <span class="wrap-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+                                    <h3 class="name">Phốc Sóc Siêu Phẩm Ú Nù</h3>
+                                    <span class="price">35.000.000 ₫</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="content_container-list-nav-detail">
-                        <span class="id_product">ID : SP00243 </span>
-                        <h3>Phốc Sóc Siêu Phẩm Ú Nù</h3>
-                        <span class="price">35.000.000 ₫</span>
+                    <div class="view-more">
+                        <button type="button" class="btn btn-primary">
+                            <a href="#" class="btn-primary-link">Xem thêm</a>
+                        </button>
                     </div>
                 </div>
-
-                <div class="content_container-list-nav c-3">
-                    <div class="content_container-list-nav-images">
-                        <img src="./images/images_3.png" alt="">
-                        <span>New</span>
+                <div class="content">
+                    <h2 class="content__heading">Shop Bán Chó Mèo Cảnh</h2>
+                    <div class="content__list row justify-content-center">
+                        <div class="col c-6 m-4 l-3">
+                            <div class="content__item">
+                                <div class="content__item-img-wrap">
+                                    <img src="./assets/images/images_3.png" alt="">
+                                    <span class="content__item--new">New</span>
+                                    <div class="content__item--coat">
+                                        <div class="content__item--coat-growth">
+                                            <div class="content__item--coat-wrap">
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <span class="coat-btn-title">Yêu thích</span>
+                                                </button>
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <span class="coat-btn-title">Xem nhanh</span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="btn btn-primary">
+                                                <a href="#" class="btn-primary-link">Xem thêm</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__item-detail">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="id_product">ID : SP00243 </span>
+                                        <span class="wrap-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+                                    <h3 class="name">Phốc Sóc Siêu Phẩm Ú Nù</h3>
+                                    <span class="price">35.000.000 ₫</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-6 m-4 l-3">
+                            <div class="content__item">
+                                <div class="content__item-img-wrap">
+                                    <img src="./assets/images/images_3.png" alt="">
+                                    <span class="content__item--new">New</span>
+                                    <div class="content__item--coat">
+                                        <div class="content__item--coat-growth">
+                                            <div class="content__item--coat-wrap">
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <span class="coat-btn-title">Yêu thích</span>
+                                                </button>
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <span class="coat-btn-title">Xem nhanh</span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="btn btn-primary">
+                                                <a href="#" class="btn-primary-link">Xem thêm</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__item-detail">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="id_product">ID : SP00243 </span>
+                                        <span class="wrap-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+                                    <h3 class="name">Phốc Sóc Siêu Phẩm Ú Nù</h3>
+                                    <span class="price">35.000.000 ₫</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-6 m-4 l-3">
+                            <div class="content__item">
+                                <div class="content__item-img-wrap">
+                                    <img src="./assets/images/husky.jpg" alt="">
+                                    <span class="content__item--new">New</span>
+                                    <div class="content__item--coat">
+                                        <div class="content__item--coat-growth">
+                                            <div class="content__item--coat-wrap">
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <span class="coat-btn-title">Yêu thích</span>
+                                                </button>
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <span class="coat-btn-title">Xem nhanh</span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="btn btn-primary">
+                                                <a href="#" class="btn-primary-link">Xem thêm</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__item-detail">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="id_product">ID : SP00243 </span>
+                                        <span class="wrap-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+                                    <h3 class="name">Phốc Sóc Siêu Phẩm Ú Nù</h3>
+                                    <span class="price">35.000.000 ₫</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-6 m-4 l-3">
+                            <div class="content__item">
+                                <div class="content__item-img-wrap">
+                                    <img src="./assets/images/images_3.png" alt="">
+                                    <span class="content__item--new">New</span>
+                                    <div class="content__item--coat">
+                                        <div class="content__item--coat-growth">
+                                            <div class="content__item--coat-wrap">
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <span class="coat-btn-title">Yêu thích</span>
+                                                </button>
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <span class="coat-btn-title">Xem nhanh</span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="btn btn-primary">
+                                                <a href="#" class="btn-primary-link">Xem thêm</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__item-detail">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="id_product">ID : SP00243 </span>
+                                        <span class="wrap-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+                                    <h3 class="name">Phốc Sóc Siêu Phẩm Ú Nù</h3>
+                                    <span class="price">35.000.000 ₫</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-6 m-4 l-3">
+                            <div class="content__item">
+                                <div class="content__item-img-wrap">
+                                    <img src="./assets/images/images_3.png" alt="">
+                                    <span class="content__item--new">New</span>
+                                    <div class="content__item--coat">
+                                        <div class="content__item--coat-growth">
+                                            <div class="content__item--coat-wrap">
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <span class="coat-btn-title">Yêu thích</span>
+                                                </button>
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <span class="coat-btn-title">Xem nhanh</span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="btn btn-primary">
+                                                <a href="#" class="btn-primary-link">Xem thêm</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__item-detail">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="id_product">ID : SP00243 </span>
+                                        <span class="wrap-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+                                    <h3 class="name">Phốc Sóc Siêu Phẩm Ú Nù</h3>
+                                    <span class="price">35.000.000 ₫</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-6 m-4 l-3">
+                            <div class="content__item">
+                                <div class="content__item-img-wrap">
+                                    <img src="./assets/images/images_3.png" alt="">
+                                    <span class="content__item--new">New</span>
+                                    <div class="content__item--coat">
+                                        <div class="content__item--coat-growth">
+                                            <div class="content__item--coat-wrap">
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <span class="coat-btn-title">Yêu thích</span>
+                                                </button>
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <span class="coat-btn-title">Xem nhanh</span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="btn btn-primary">
+                                                <a href="#" class="btn-primary-link">Xem thêm</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__item-detail">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="id_product">ID : SP00243 </span>
+                                        <span class="wrap-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+                                    <h3 class="name">Phốc Sóc Siêu Phẩm Ú Nù</h3>
+                                    <span class="price">35.000.000 ₫</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-6 m-4 l-3">
+                            <div class="content__item">
+                                <div class="content__item-img-wrap">
+                                    <img src="./assets/images/images_3.png" alt="">
+                                    <span class="content__item--new">New</span>
+                                    <div class="content__item--coat">
+                                        <div class="content__item--coat-growth">
+                                            <div class="content__item--coat-wrap">
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <span class="coat-btn-title">Yêu thích</span>
+                                                </button>
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <span class="coat-btn-title">Xem nhanh</span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="btn btn-primary">
+                                                <a href="#" class="btn-primary-link">Xem thêm</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__item-detail">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="id_product">ID : SP00243 </span>
+                                        <span class="wrap-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+                                    <h3 class="name">Phốc Sóc Siêu Phẩm Ú Nù</h3>
+                                    <span class="price">35.000.000 ₫</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-6 m-4 l-3">
+                            <div class="content__item">
+                                <div class="content__item-img-wrap">
+                                    <img src="./assets/images/images_3.png" alt="">
+                                    <span class="content__item--new">New</span>
+                                    <div class="content__item--coat">
+                                        <div class="content__item--coat-growth">
+                                            <div class="content__item--coat-wrap">
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <span class="coat-btn-title">Yêu thích</span>
+                                                </button>
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <span class="coat-btn-title">Xem nhanh</span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="btn btn-primary">
+                                                <a href="#" class="btn-primary-link">Xem thêm</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__item-detail">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="id_product">ID : SP00243 </span>
+                                        <span class="wrap-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+                                    <h3 class="name">Phốc Sóc Siêu Phẩm Ú Nù</h3>
+                                    <span class="price">35.000.000 ₫</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="content_container-list-nav-detail">
-                        <span class="id_product">ID : SP00243 </span>
-                        <h3>Phốc Sóc Siêu Phẩm Ú Nù</h3>
-                        <span class="price">35.000.000 ₫</span>
+                    <div class="view-more">
+                        <button type="button" class="btn btn-primary">
+                            <a href="#" class="btn-primary-link">Xem thêm</a>
+                        </button>
                     </div>
                 </div>
-
-                <div class="content_container-list-nav c-3">
-                    <div class="content_container-list-nav-images">
-                        <img src="./images/images_3.png" alt="">
-                        <span>New</span>
+                <div class="content">
+                    <h2 class="content__heading">Phụ kiện thú cưng</h2>
+                    <div class="content__list row justify-content-center">
+                        <div class="col c-6 m-4 l-3">
+                            <div class="content__item">
+                                <div class="content__item-img-wrap">
+                                    <img src="./assets/images/images_3.png" alt="">
+                                    <span class="content__item--new">New</span>
+                                    <div class="content__item--coat">
+                                        <div class="content__item--coat-growth">
+                                            <div class="content__item--coat-wrap">
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <span class="coat-btn-title">Yêu thích</span>
+                                                </button>
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <span class="coat-btn-title">Xem nhanh</span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="btn btn-primary">
+                                                <a href="#" class="btn-primary-link">Xem thêm</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__item-detail">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="id_product">ID : SP00243 </span>
+                                        <span class="wrap-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+                                    <h3 class="name">Phốc Sóc Siêu Phẩm Ú Nù</h3>
+                                    <span class="price">35.000.000 ₫</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-6 m-4 l-3">
+                            <div class="content__item">
+                                <div class="content__item-img-wrap">
+                                    <img src="./assets/images/images_3.png" alt="">
+                                    <span class="content__item--new">New</span>
+                                    <div class="content__item--coat">
+                                        <div class="content__item--coat-growth">
+                                            <div class="content__item--coat-wrap">
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <span class="coat-btn-title">Yêu thích</span>
+                                                </button>
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <span class="coat-btn-title">Xem nhanh</span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="btn btn-primary">
+                                                <a href="#" class="btn-primary-link">Xem thêm</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__item-detail">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="id_product">ID : SP00243 </span>
+                                        <span class="wrap-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+                                    <h3 class="name">Phốc Sóc Siêu Phẩm Ú Nù</h3>
+                                    <span class="price">35.000.000 ₫</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-6 m-4 l-3">
+                            <div class="content__item">
+                                <div class="content__item-img-wrap">
+                                    <img src="./assets/images/husky.jpg" alt="">
+                                    <span class="content__item--new">New</span>
+                                    <div class="content__item--coat">
+                                        <div class="content__item--coat-growth">
+                                            <div class="content__item--coat-wrap">
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <span class="coat-btn-title">Yêu thích</span>
+                                                </button>
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <span class="coat-btn-title">Xem nhanh</span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="btn btn-primary">
+                                                <a href="#" class="btn-primary-link">Xem thêm</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__item-detail">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="id_product">ID : SP00243 </span>
+                                        <span class="wrap-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+                                    <h3 class="name">Phốc Sóc Siêu Phẩm Ú Nù</h3>
+                                    <span class="price">35.000.000 ₫</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-6 m-4 l-3">
+                            <div class="content__item">
+                                <div class="content__item-img-wrap">
+                                    <img src="./assets/images/images_3.png" alt="">
+                                    <span class="content__item--new">New</span>
+                                    <div class="content__item--coat">
+                                        <div class="content__item--coat-growth">
+                                            <div class="content__item--coat-wrap">
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <span class="coat-btn-title">Yêu thích</span>
+                                                </button>
+                                                <button type="button" class="coat-btn">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <span class="coat-btn-title">Xem nhanh</span>
+                                                </button>
+                                            </div>
+                                            <button type="button" class="btn btn-primary">
+                                                <a href="#" class="btn-primary-link">Xem thêm</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content__item-detail">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="id_product">ID : SP00243 </span>
+                                        <span class="wrap-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </div>
+                                    <h3 class="name">Phốc Sóc Siêu Phẩm Ú Nù</h3>
+                                    <span class="price">35.000.000 ₫</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="content_container-list-nav-detail">
-                        <span class="id_product">ID : SP00243 </span>
-                        <h3>Phốc Sóc Siêu Phẩm Ú Nù</h3>
-                        <span class="price">35.000.000 ₫</span>
+                    <div class="view-more">
+                        <button type="button" class="btn btn-primary">
+                            <a href="#" class="btn-primary-link">Xem thêm</a>
+                        </button>
                     </div>
                 </div>
-
-                <div class="content_container-list-nav c-3">
-                    <div class="content_container-list-nav-images">
-                        <img src="./images/images_3.png" alt="">
-                        <span>New</span>
-                    </div>
-                    <div class="content_container-list-nav-detail">
-                        <span class="id_product">ID : SP00243 </span>
-                        <h3>Phốc Sóc Siêu Phẩm Ú Nù</h3>
-                        <span class="price">35.000.000 ₫</span>
-                    </div>
-                </div>
-
             </div>
         </div>
         <div class="footer">
-
+            <hr color="#de8ebe" />
+            <div class="footer__wrapper">
+                <div class="grid wide">
+                    <div class="d-flex footer__wrapper-track">
+                        <div class="footer__wrapper-item">
+                            <img src="./assets/images/dog1.png" alt="">
+                            <div class="footer__wrapper-img-desc">
+                                <h3 class="title">Jack Russel</h3>
+                                <p class="desc">Mô tả nếu có</p>
+                            </div>
+                        </div>
+                        <div class="footer__wrapper-item">
+                            <img src="./assets/images/dog6.png" alt="">
+                            <div class="footer__wrapper-img-desc">
+                                <h3 class="title">Jack Russel</h3>
+                                <p class="desc"></p>
+                            </div>
+                        </div>
+                        <div class="footer__wrapper-item">
+                            <img src="./assets/images/dog6.png" alt="">
+                            <div class="footer__wrapper-img-desc">
+                                <h3 class="title">Jack Russel</h3>
+                                <p class="desc"></p>
+                            </div>
+                        </div>
+                        <div class="footer__wrapper-item">
+                            <img src="./assets/images/dog6.png" alt="">
+                            <div class="footer__wrapper-img-desc">
+                                <h3 class="title">Jack Russel</h3>
+                                <p class="desc"></p>
+                            </div>
+                        </div>
+                        <div class="footer__wrapper-item">
+                            <img src="./assets/images/dog6.png" alt="">
+                            <div class="footer__wrapper-img-desc">
+                                <h3 class="title">Jack Russel</h3>
+                                <p class="desc"></p>
+                            </div>
+                        </div>
+                        <div class="footer__wrapper-item">
+                            <img src="./assets/images/dog6.png" alt="">
+                            <div class="footer__wrapper-img-desc">
+                                <h3 class="title">Jack Russel</h3>
+                                <p class="desc"></p>
+                            </div>
+                        </div>
+                        <div class="footer__wrapper-item">
+                            <img src="./assets/images/dog6.png" alt="">
+                            <div class="footer__wrapper-img-desc">
+                                <h3 class="title">Jack Russel</h3>
+                                <p class="desc"></p>
+                            </div>
+                        </div>
+                        <div class="footer__wrapper-item">
+                            <img src="./assets/images/dog6.png" alt="">
+                            <div class="footer__wrapper-img-desc">
+                                <h3 class="title">Jack Russel</h3>
+                                <p class="desc"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__contact grid wide">
+                <div class="row">
+                    <div class="col c-6">
+                        <h2 class="footer__contact-heading">Liên lạc</h2>
+                        <ul class="footer__contact-list">
+                            <li class="footer__contact-item">
+                                <i class="fa-solid fa-map-location"></i>
+                                <b>Địa chỉ: </b>
+                                <span>294 -296 Đồng Đen - Quận Tân Bình - Hồ Chí Minh</span>
+                            </li>
+                            <li class="footer__contact-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <b>Điện thoại: </b>
+                                <a href="tel: 0939.86.36.96">0939.86.36.96</a>
+                            </li>
+                            <li class="footer__contact-item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <b>Email: </b>
+                                <a href="mailto: matpetfamily2011@gmail.com">matpetfamily2011@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col c-6">
+                        <div class="footer-wrap-iframe">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/05IY4eEbH4w"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="coppyright">
+                <p>&copy; Team .....</p>
+            </div>
         </div>
+        <a href="#" class="btn btn-on-top">
+            <i class="fa-solid fa-angle-up"></i>
+        </a>
     </div>
-
+    <script src="./assets/js/main.js"></script>
 </body>
+
 </html>

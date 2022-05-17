@@ -2,6 +2,8 @@
     width: 100%;
     display: block;
     padding: 0;
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 .grid.wide {
@@ -137,6 +139,38 @@
 
 .c-o-11 {
     margin-left: 91.66667%;
+}
+
+/* small screen */
+@media (max-width: 33.75em) {
+
+    .c-1,
+    .c-2,
+    .c-3,
+    .c-4,
+    .c-5,
+    .c-6,
+    .c-7,
+    .c-8,
+    .c-9,
+    .c-10,
+    .c-11,
+    .c-12,
+    .m-1,
+    .m-2,
+    .m-3,
+    .m-4,
+    .m-5,
+    .m-6,
+    .m-7,
+    .m-8,
+    .m-9,
+    .m-10,
+    .m-11,
+    .m-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
 
 /* >= Tablet */
